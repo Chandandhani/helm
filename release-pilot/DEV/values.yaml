@@ -1,0 +1,11 @@
+image:
+  repository: adamtravis/rollouts
+  tag: blue
+
+service:
+  type: NodePort
+  port: 8080
+
+containerPort: 8080
+
+replicaCount: 1

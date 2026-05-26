@@ -1,0 +1,8 @@
+apiVersion: v2
+name: release-pilot
+description: Helm chart for rollout demo application
+
+type: application
+
+version: 1.0.0
+appVersion: "1.0.0"
