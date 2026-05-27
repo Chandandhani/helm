@@ -3,12 +3,12 @@ entries:
   release-pilot:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2026-05-26T17:16:53.81250831Z"
+    created: "2026-05-27T06:14:37.212657679Z"
     description: Helm chart for rollout demo application
-    digest: c57ddabbeaa2cc95cd3bc0493c623a80b85c54ba6f4de7c75e96dd8d115d3985
+    digest: 63269f7b87e79359d37e99eb88e8452b8aa4c5ac25ea5f49a0f6d3ceeae06d03
     name: release-pilot
     type: application
     urls:
     - release-pilot-1.0.0.tgz
     version: 1.0.0
-generated: "2026-05-26T17:16:53.81218775Z"
+generated: "2026-05-27T06:14:37.211953502Z"
