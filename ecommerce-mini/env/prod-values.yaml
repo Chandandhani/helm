@@ -1,0 +1,11 @@
+image:
+  repository: chandandhani7556/flask_backend_app:v2
+  tag: blue
+
+service:
+  type: NodePort
+  port: 5000
+
+containerPort: 5000
+
+replicaCount: 3

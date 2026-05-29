@@ -1,0 +1,9 @@
+apiVersion: v2
+name: ecommerce-mini
+description: Helm chart for rollout demo application
+
+type: application
+
+version: 2.0.0
+appVersion: "1.0.0"
+

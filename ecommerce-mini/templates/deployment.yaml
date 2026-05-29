@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: {{ include "release-pilot.fullname" . }}
+
+  labels:
+    {{- include "release-pilot.labels" . | nindent 4 }}
+
+spec:
+  replicas: {{ .Values.replicaCount }}
+
+  selector:
+    matchLabels:
+      {{- include "release-pilot.selectorLabels" . | nindent 6 }}
+
+  template:
+
+    metadata:
+      labels:
+        {{- include "release-pilot.selectorLabels" . | nindent 8 }}
+
+    spec:
+
+      containers:
+        - name: release-pilot
+
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+
+          imagePullPolicy: IfNotPresent
+
+          ports:
+            - containerPort: {{ .Values.containerPort }}
