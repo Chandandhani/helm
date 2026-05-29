@@ -3,23 +3,23 @@ entries:
   ecommerce-mini:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2026-05-29T03:31:08.250654032Z"
-    description: Helm chart for rollout demo application
-    digest: f0d2262f164fe5637ea672a4720f1949bcc3c41e0982a8d5b9df07bb53e44676
+    created: "2026-05-29T14:26:37.503571032Z"
+    description: A Helm chart for Kubernetes
+    digest: 9142040c30455dfa627ce999c94ebd2c5cfd1b55eeff03c3c9a8809d9e8e77bb
     name: ecommerce-mini
     type: application
     urls:
-    - https://chandandhani.github.io/helm/ecommerce-mini-2.0.0.tgz
-    version: 2.0.0
+    - https://chandandhani.github.io/helm/ecommerce-mini-1.0.0.tgz
+    version: 1.0.0
   release-pilot:
   - apiVersion: v2
-    appVersion: 1.0.0
-    created: "2026-05-29T03:31:08.251047545Z"
-    description: Helm chart for rollout demo application
-    digest: 63269f7b87e79359d37e99eb88e8452b8aa4c5ac25ea5f49a0f6d3ceeae06d03
+    appVersion: 2.0.0
+    created: "2026-05-29T14:26:37.503979206Z"
+    description: A Helm chart for Kubernetes
+    digest: b10c25a1c2bd63b4e0f6cbc22f82156def4766d898df46ce62f6e5b651882cb4
     name: release-pilot
     type: application
     urls:
-    - https://chandandhani.github.io/helm/release-pilot-1.0.0.tgz
-    version: 1.0.0
-generated: "2026-05-29T03:31:08.250194924Z"
+    - https://chandandhani.github.io/helm/release-pilot-2.0.0.tgz
+    version: 2.0.0
+generated: "2026-05-29T14:26:37.503012507Z"

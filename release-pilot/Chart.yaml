@@ -1,8 +1,6 @@
 apiVersion: v2
 name: release-pilot
-description: Helm chart for rollout demo application
-
+description: A Helm chart for Kubernetes
 type: application
-
-version: 1.0.0
-appVersion: "1.0.0"
+version: 2.0.0
+appVersion: "2.0.0"

@@ -1,11 +1,11 @@
 image:
-  repository: chandandhani7556/flask_backend_app:v2
+  repository: adamtravis/rollouts
   tag: blue
 
 service:
   type: NodePort
-  port: 5000
+  port: 8080
 
-containerPort: 5000
+containerPort: 8080
 
 replicaCount: 1
