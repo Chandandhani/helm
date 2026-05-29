@@ -2,28 +2,28 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: {{ include "ecommerce-mini.fullname" . }}
+  name: {{ include "release-pilot.fullname" . }}
 
   labels:
-    {{- include "ecommerce-mini.labels" . | nindent 4 }}
+    {{- include "release-pilot.labels" . | nindent 4 }}
 
 spec:
   replicas: {{ .Values.replicaCount }}
 
   selector:
     matchLabels:
-      {{- include "ecommerce-mini.selectorLabels" . | nindent 6 }}
+      {{- include "release-pilot.selectorLabels" . | nindent 6 }}
 
   template:
 
     metadata:
       labels:
-        {{- include "ecommerce-mini.selectorLabels" . | nindent 8 }}
+        {{- include "release-pilot.selectorLabels" . | nindent 8 }}
 
     spec:
 
       containers:
-        - name: ecommerce-mini
+        - name: release-pilot
 
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
 
