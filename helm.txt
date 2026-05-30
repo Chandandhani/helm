@@ -1,4 +1,4 @@
-mkdir ~/helm-chart
+mkdir -p ~/helm-chart
 cd ~/helm-chart
 helm create ecommerce-mini
 helm create release-pilot
@@ -17,11 +17,11 @@ tree .
 vi ecommerce-mini/Chart.yaml
 vi release-pilot/Chart.yaml
 
+helm template release-pilot -f release-pilot/env/dev-values.yaml
+helm template release-pilot -f release-pilot/env/uat-values.yaml
+
 helm lint ecommerce-mini
 helm lint release-pilot
-
-helm template ecommerce-mini ecommerce-mini
-helm template release-pilot release-pilot
 
 helm package ecommerce-mini
 helm package release-pilot
@@ -31,11 +31,17 @@ helm repo index . --url https://chandandhani.github.io/helm
 helm repo add myrepo https://chandandhani.github.io/helm
 curl -L -o dev-values.yaml https://raw.githubusercontent.com/Chandandhani/helm/main/release-pilot/env/dev-values.yaml
 
-helm install ecommerce myrepo/ecommerce-mini -f dev-values.yaml
-helm install pilot myrepo/release-pilot -f dev-values.yaml
+curl -L -o dev-values.yaml https://raw.githubusercontent.com/Chandandhani/helm/refs/heads/main/ecommerce-mini/env/dev-values.yaml
+
+helm upgrade --install ecommerce helm/ecommerce-mini -f dev-values.yaml
+helm upgrade --install release-pilot helm/release-pilot -f dev-values.yaml
 
 helm upgrade ecommerce myrepo/ecommerce-mini
 
 helm history ecommerce
 
 helm rollback ecommerce 1
+
+ingress-controller installation yaml
+
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.15.1/deploy/static/provider/cloud/deploy.yaml
