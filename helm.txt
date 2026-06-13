@@ -45,3 +45,6 @@ helm rollback ecommerce 1
 ingress-controller installation yaml
 
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.15.1/deploy/static/provider/cloud/deploy.yaml
+####For argocd rollout
+kubectl argo rollouts get rollout flask-backend-ro -n demo-app  --watch
+kubectl argo rollouts promote  rollout flask-backend-ro -n demo-app
